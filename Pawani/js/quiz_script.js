@@ -174,7 +174,7 @@ function tenses_highlight(){
 }
 
 function retrive_func() {
-    // window.open("tenses.html");
+    // window.open("tenses.php");
     var d = new Date();
     var n = d.toISOString().split('T');
     //alert(n);

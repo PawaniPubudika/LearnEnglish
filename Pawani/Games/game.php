@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="game_style.css">
 
 </head>
+
 <body style="background-color: #8a909a">
     <div id="container">
         <h1 id="tic_topic">Tic Tac Toe</h1>

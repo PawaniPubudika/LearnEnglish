@@ -6,11 +6,23 @@
     <link rel="stylesheet" href="css/quizpage_style.css">
 </head>
 
+<?php
+include('conn.php');
+session_start();
+
+$user1 = $_SESSION['user'];
+
+$query=mysqli_query($conn,"select * from `loginform` where User='$user1' ");
+if(mysqli_num_rows($query)==0){
+    header('location: index.php');
+}
+
+?>
 
 <!--<body onload="retrive_func()">-->
 <header>
     <img src="images/logo.png" alt="">
-    <a href="../dir/index.html" style=""> <h1 id="headerh1">It's Time to Learn English</h1></a>
+    <a href="speech.php" style=""> <h1 id="headerh1">It's Time to Learn English</h1></a>
     <h1 id="logout" onclick="logout_func()">Log out</h1>
     <h1 id="userdetails" onclick="userdetails()">user details</h1>
 

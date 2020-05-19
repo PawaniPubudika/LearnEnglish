@@ -8,6 +8,7 @@
 
 </head>
 <!--<body onload="retrive_func()">-->
+
 <?php
 include('conn.php');
 session_start();
@@ -34,10 +35,12 @@ if(mysqli_num_rows($query)==0){
     <h1 id="topic">Follow our lessons.....</h1>
     <li class="lessons"><a href="#seperatediv" style="text-decoration: none;color: white" >
             Eight Parts of Speech</a></li>
-    <li class="lessons"><a href="../Pawani/tenses.html" style="text-decoration: none;color: white">
+    <li class="lessons"><a href="tenses.php" style="text-decoration: none;color: white">
             Tenses</a></li>
     <li class="lessons"><a href="quiz.php" style="text-decoration: none;color: white">
             Quiz</a></li>
+    <li class="lessons"><a href="Games/game.php" style="text-decoration: none;color: white">
+            Games</a></li>
 </ul>
 
 <div id="seperatediv"></div>

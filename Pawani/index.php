@@ -5,7 +5,6 @@
     }
 ?>
 
-
 <!DOCTYPE html>
 
 <html>
@@ -32,7 +31,6 @@
         <div style="height: 15px;"></div>
         <div style="color: red; font-size: 15px;">
                 <?php
-                session_start();
                 if(isset($_SESSION['msg'])){
                     echo $_SESSION['msg'];
                     unset($_SESSION['msg']);

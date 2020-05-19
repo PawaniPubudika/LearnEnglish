@@ -7,12 +7,24 @@
 <!--    <meta name="viewport" content="width=device-width,user-scalable=no">-->
 
 </head>
-<body onload="retrive_func()">
+<!--<body onload="retrive_func()">-->
+<?php
+include('conn.php');
+session_start();
+
+$user1 = $_SESSION['user'];
+
+$query=mysqli_query($conn,"select * from `loginform` where User='$user1' ");
+if(mysqli_num_rows($query)==0){
+    header('location: index.php');
+}
+
+?>
 
 
 <header>
-    <a href="../dir/index.html" style=""> <img id="header_img" src="images/logo.png" alt=""></a>
-    <a href="../dir/index.html" style=""> <h1 id="headerh1">It's Time to Learn English</h1></a>
+    <a href="speech.php" style=""> <img id="header_img" src="images/logo.png" alt=""></a>
+    <a href="speech.php" style=""> <h1 id="headerh1">It's Time to Learn English</h1></a>
     <h1 id="logout" onclick="logout_func()">Log out</h1>
 <!--    <h1 id="userdetails" onclick="userdetails()">user details</h1>-->
 
@@ -125,7 +137,7 @@
 </div>
 
 <footer>
-    <a href="tenses.html"><h3 id="footermain">Top</h3></a>
+    <a href="tenses.php"><h3 id="footermain">Top</h3></a>
     <a href="mailto:pubudikalwp@gmail.com"><h3 id="footercontent" style="font-family: cursive">contact me:pubudikalwp@gmail.com</h3></a>
 </footer>
 
