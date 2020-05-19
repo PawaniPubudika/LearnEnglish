@@ -8,6 +8,18 @@
 
 </head>
 <!--<body onload="retrive_func()">-->
+<?php
+include('conn.php');
+session_start();
+
+$user1 = $_SESSION['user'];
+
+$query=mysqli_query($conn,"select * from `loginform` where User='$user1' ");
+if(mysqli_num_rows($query)==0){
+    header('location: index.php');
+}
+
+?>
 
 <header>
     <img src="../Pawani/images/logo.png" alt="">
